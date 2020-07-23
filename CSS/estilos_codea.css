@@ -151,3 +151,12 @@ footer{
     width: 100%;
     height: 80px;
 }
+.content_footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px;
+}
+h5 {
+    font-family: 'Press Start 2P', cursive;
+}

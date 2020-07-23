@@ -1,0 +1,18 @@
+
+.contenedor{
+    margin: auto;
+    width:80%;
+    background-color: rosybrown;
+}
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    padding:5px;
+    margin: 5px;
+}
+    
+    
