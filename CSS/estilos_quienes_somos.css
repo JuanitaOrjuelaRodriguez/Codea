@@ -30,7 +30,7 @@ header {
 .logo h2{
     display: inline-block;
     margin: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     font-family: 'Press Start 2P', cursive;
     font-size:  28px;
     color: #fff;
@@ -42,12 +42,12 @@ header {
 nav > a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
 }
 nav > a:hover {
     color: rgb(223, 165, 165);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
 }
 .textos_header{
     padding: 20px;
