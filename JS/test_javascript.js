@@ -20,7 +20,7 @@ if (document.getElementById('p44').checked==true) {
 } else {
     p4=0
 }
-if (document.getElementById('p51').checked==true) {
+if (document.getElementById('p54').checked==true) {
     p5=1
 } else {
     p5=0
@@ -29,11 +29,6 @@ if (document.getElementById('p62').checked==true) {
     p6=1
 } else {
     p6=0
-}
-if (document.getElementById('p74').checked==true) {
-    p7=1
-} else {
-    p7=0
 }
 
 //Resultado
@@ -44,11 +39,11 @@ if (document.getElementById('p74').checked==true) {
 //Clasificación resultado
 const rate_calification = nota;
 if (rate_calification <= 3){
-    document.write("Sigue practicando. Puede que sea necesario comenzar desde el cruso de Fundamentos de desarrollo web (Principiante)'.");
+    document.write("Sigue practicando. Puede que sea necesario comenzar desde el cruso de Fundamentos de desarrollo web (Principiante).");
 } else if (rate_calification > 3 && rate_calification <= 5) {
-    document.write("Vale, tienes un buen nivel pero hay que trabjar un poco más. Entonces puede que estés listo para presentarte al curso de 'Hola mundo! (Intermedio)'");
+    document.write("Vale, tienes un buen nivel pero hay que trabjar un poco más. Entonces puede que estés listo para presentarte al curso de 'Hola mundo! (Intermedio)");
 } else if (rate_calification > 5 && rate_calification <=6) {
-    document.write("Enhorabuena, completaste el test sin fallas. Certifcate con nuestro curso 'JavaScript para la web (Avanzado)'");
+    document.write("Enhorabuena, completaste el test sin fallas. Certifcate con nuestro curso 'JavaScript para la web (Avanzado)");
 }
    }
 
