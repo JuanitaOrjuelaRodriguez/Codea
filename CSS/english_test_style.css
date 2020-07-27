@@ -12,8 +12,11 @@ header{
 }
 h2 {
     font-family: 'Press Start 2P', cursive;
+    font-size: 26px;
     padding:5px;
     margin: 5px;
 }
-    
-    
+h3, p {
+    padding: 5px;
+    margin: 5px;
+}
