@@ -5,7 +5,7 @@ if (document.getElementById('p11').checked==true) {
 } else {
     p1=0
 }
-if (document.getElementById('p23').checked==true) {
+if (document.getElementById('p22').checked==true) {
     p2=1
 } else {
     p2=0
@@ -33,18 +33,30 @@ if (document.getElementById('p62').checked==true) {
 
 //Resultado
     nota=p1+p2+p3+p4+p5+p6;
-    document.write('<h2>' + " Felicidades, completaste la prueba " + '</h2>');
-    document.write('<h3 id="result">' + "Tu puntuación es " + nota + " de 6" +'</h3>');
-
+    
 //Clasificación resultado
 const rate_calification = nota;
-if (rate_calification <= 3){
-    document.write("Sigue practicando. Puede que sea necesario comenzar desde el cruso de Fundamentos de desarrollo web (Principiante).");
+
+var resultado_html = ""; 
+
+
+if (rate_calification > 0 && rate_calification <= 3){
+    resultado_html += '<h2>' + " Prueba Finalizada " + '</h2>';
+    resultado_html += '<p id="texto">' + "Sigue practicando. Puede que sea necesario comenzar desde el cruso de Fundamentos de desarrollo web (Principiante)." + '</p>';
+    resultado_html += '<h3 id="result">' + "Tu puntuación es " + nota + " de 6" +'</h3>';
 } else if (rate_calification > 3 && rate_calification <= 5) {
-    document.write("Vale, tienes un buen nivel pero hay que trabjar un poco más. Entonces puede que estés listo para presentarte al curso de 'Hola mundo! (Intermedio)");
+    resultado_html += '<h2>' + " Felicidades, completaste la prueba " + '</h2>';
+    resultado_html += "Vale, tienes un buen nivel pero hay que trabjar un poco más. Entonces puede que estés listo para presentarte al curso de 'Hola mundo! (Intermedio)";
+    resultado_html += '<h3 id="result">' + "Tu puntuación es " + nota + " de 6" +'</h3>';
 } else if (rate_calification > 5 && rate_calification <=6) {
-    document.write("Enhorabuena, completaste el test sin fallas. Certifcate con nuestro curso 'JavaScript para la web (Avanzado)");
+    resultado_html += '<h2>' + " Felicidades, completaste la prueba " + '</h2>';
+    resultado_html += "Enhorabuena, completaste el test sin fallas. Certifcate con nuestro curso 'JavaScript para la web (Avanzado)"; 
+    resultado_html += '<h3 id="result">' + "Tu puntuación es " + nota + " de 6" +'</h3>';  
+} else {
+    resultado_html += "No respondiste nada.";
 }
-   }
+$("#resultado").html(resultado_html);
+return nota
+}
 
 

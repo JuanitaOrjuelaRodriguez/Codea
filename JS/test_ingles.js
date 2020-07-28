@@ -24,18 +24,28 @@ else {p7=0}
 
 //Resultado
     nota=p1+p2+p3+p4+p5+p6+p7;
-    document.write('<h2>' + " Felicidades, completaste la prueba " + '</h2>');
-    document.write('<h3 id="result">' + "Tu puntuación es " + nota + " de 7" +'</h3>');
+
+    var resultado_html = ""; 
 
 //Clasificación resultado
 const rate_calification = nota;
-if (rate_calification <= 3){
-    document.write("Sigue practicando tu inglés. Entonces puede que estés listo para prepararte a 'English A Course (Beginners)'.");
+if (rate_calification > 0 && rate_calification <= 3){
+    resultado_html += '<h2>' + " Prueba Finalizada " + '</h2>';
+    resultado_html += "Sigue practicando tu inglés. Entonces puede que estés listo para prepararte a 'English A Course (Beginners)'.";
+    resultado_html += '<h3 id="result">' + "Tu puntuación es " + nota + " de 7" +'</h3>';
 } else if (rate_calification > 3 && rate_calification <= 5) {
-    document.write("Vale, tienes un buen nivel pero hay que trabjar un poco más en tu inglés. Entonces puede que estés listo para presentarte a 'English B Course (Intermediate)'");
+    resultado_html += '<h2>' + " Felicidades, completaste la prueba " + '</h2>';
+    resultado_html += "Vale, tienes un buen nivel pero hay que trabjar un poco más en tu inglés. Entonces puede que estés listo para presentarte a 'English B Course (Intermediate)'";
+    resultado_html += '<h2>' + " Felicidades, completaste la prueba " + '</h2>';
 } else if (rate_calification > 5 && rate_calification <=7) {
-    document.write("Enhorabuena, completaste el test sin fallas. Certifcate con nuestro curso 'Advanced English C (Advanced)'");
+    resultado_html += '<h2>' + " Felicidades, completaste la prueba " + '</h2>';
+    resultado_html += "Enhorabuena, completaste el test sin fallas. Certifcate con nuestro curso 'Advanced English C (Advanced)'";
+    resultado_html += '<h3 id="result">' + "Tu puntuación es " + nota + " de 7" +'</h3>';
+} else {
+    resultado_html += "No respondiste nada.";
+} 
+$("#resultado").html(resultado_html);
+return nota
 }
-   }
 
 
