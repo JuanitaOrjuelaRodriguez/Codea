@@ -30,7 +30,7 @@
             <p><input type="radio" name="pregunta2" id="p23"> We can't decide.</p> <!--Respuesta-->
             <p><input type="radio" name="pregunta2" id="p24"> Rigth option.</p>
             <hr>
-            <p>tercera pregunta del test... La respuesta es C.</p>
+            <p>tercera pregunta delru test... La respuesta es C.</p>
             <p><input type="radio" name="pregunta3" id="p31"> Texto de la respuesta A.</p>
             <p><input type="radio" name="pregunta3" id="p32"> Texto de la respuesta B.</p>
             <p><input type="radio" name="pregunta3" id="p33"> Texto de la respuesta C.</p>
