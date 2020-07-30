@@ -25,27 +25,56 @@ else {p7=0}
 //Resultado
     nota=p1+p2+p3+p4+p5+p6+p7;
 
-    var resultado_html = ""; 
-
 //Clasificación resultado
 const rate_calification = nota;
+
+var resultado_html = ""; 
+
 if (rate_calification > 0 && rate_calification <= 3){
     resultado_html += '<h2>' + " Prueba Finalizada " + '</h2>';
-    resultado_html += "Sigue practicando tu inglés. Entonces puede que estés listo para prepararte a 'English A Course (Beginners)'.";
+    resultado_html += '<p>' + "Sigue practicando tu inglés. Entonces puede que estés listo para prepararte a 'English Course - Free Trial Beginners'." + '</p>';
     resultado_html += '<h3 id="result">' + "Tu puntuación es " + nota + " de 7" +'</h3>';
 } else if (rate_calification > 3 && rate_calification <= 5) {
     resultado_html += '<h2>' + " Felicidades, completaste la prueba " + '</h2>';
-    resultado_html += "Vale, tienes un buen nivel pero hay que trabjar un poco más en tu inglés. Entonces puede que estés listo para presentarte a 'English B Course (Intermediate)'";
-    resultado_html += '<h2>' + " Felicidades, completaste la prueba " + '</h2>';
+    resultado_html += "Vale, tienes un buen nivel pero hay que trabjar un poco más en tu inglés. Entonces puede que estés listo para presentarte a 'English Course 150 Intermediate'";
+    resultado_html += '<h3 id="result">' + "Tu puntuación es " + nota + " de 7" +'</h3>';
 } else if (rate_calification > 5 && rate_calification <=7) {
-    resultado_html += '<h2>' + " Felicidades, completaste la prueba " + '</h2>';
-    resultado_html += "Enhorabuena, completaste el test sin fallas. Certifcate con nuestro curso 'Advanced English C (Advanced)'";
+    resultado_html += '<h2>' + " ¡Felicidades! " + '</h2>';
+    resultado_html += "Completaste el test sin fallas. Certificate con nuestro curso 'English Course 420 Advanced'";
     resultado_html += '<h3 id="result">' + "Tu puntuación es " + nota + " de 7" +'</h3>';
 } else {
-    resultado_html += "No respondiste nada.";
+    resultado_html += '<h4>' + "¡No has respondido nada aún!" + '</h4>';
+    resultado_html += '<h3 id="result">' + "Tu puntuación es " + nota + " de 7" +'</h3>'; 
 } 
 $("#resultado").html(resultado_html);
 return nota
 }
 
+//mostrar cursos según validación de resultado
+function mostrar(){
+    document.getElementById("mostrar").style.display="";
+    var nota = resultado();
+}
+function ejecutarFunciones(){
+    resultado();
+    mostrar();
+    deshabilitar();
+    if(nota <= 7 && nota >= 0 ){
+        document.getElementById("mostrar").style.display="";
+    } else {
+        document.getElementById("mostrar").style.display="none";
+        
+    }
+}
+//Intentos
+numeroDeIntentos = 0;
 
+function deshabilitar(){
+    
+    numeroDeIntentos += 1;
+
+    if(numeroDeIntentos === 1){
+        $('.habilitar').attr('disabled', 'disabled');
+        resultado();
+    }   
+}
