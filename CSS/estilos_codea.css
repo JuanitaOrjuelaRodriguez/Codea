@@ -82,7 +82,7 @@ nav > a:hover {
 }
 
 header .texto_header {
-    margin-top: 80px;
+    margin-top: 70px;
     margin-left: 50px;
     display: flex;
     flex-direction: column;
@@ -131,6 +131,8 @@ h4 .benefit_title{
 /*--suscription space--*/
 
 .suscription_col{
+    float: none;
+    margin: 10px auto;
     background-color: hsla(294, 53%, 69%, 0.822);
     width: 300px;
     height: 430px;
@@ -149,7 +151,6 @@ h4 .benefit_title{
     font-size: 16;
     padding: 5px;
 }
-
 /*--Footer--*/
 
 footer{
