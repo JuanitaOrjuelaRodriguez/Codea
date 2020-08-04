@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="CSS/english_test_style.css">
     <link rel="stylesheet" href= "http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/black-tie/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type= "text/javascript" src= "http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"</script>
+    <script type= "text/javascript" src= "http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 
 </head>
@@ -36,42 +36,7 @@
     <main>
         <div class="u_container">
             <section>
-                <input type="search" id="search_bar" placeholder="Buscar por nombre o ubicación">
-
-
-
-
-$ (document).ready(function() {
-  obtenerUniversidad();
-  obtenerinstitucion();
-});
-
-
-
-    function obtenerUniversidad() {
-  $.ajax({
-    url: "https://www.datos.gov.co/resource/iwb2-skc4.json",
-    type: "GET",
-    data: {
-      "$limit" : 5000,
-      "$$app_token" : "62OChBFCv8CFfsptSbxLEAJnE"
-    }
-  }).done(function(data) {
-  const universidades =data.map(element =>{
-    return element.nombreinstitucion;
-  });
-
-
-  const nuni = [...new Set(universidades)];
-  $("#uni").autocomplete({
-    source: nuni
-  });
-  console.log(nuni)
-  console.log(universidades);
-  });
-}
-
-
+                <input type="text" id="uni" placeholder="Buscar por nombre o ubicación">
 
             </section>
             <hr>
@@ -84,13 +49,38 @@ $ (document).ready(function() {
 
 </div>
 
-<script src= "JS/jqueryjQuery-3.5.1.min.js"></script>
+<script>
+$ (document).ready(function() {
+  obtenerUniversidad();
+
+});
+</script>
+<script>
+    function obtenerUniversidad() {
+  $.ajax({
+    url: "https://www.datos.gov.co/resource/iwb2-skc4.json",
+    type: "GET",
+    data: {
+      "$limit" : 5000,
+      "$$app_token" : "62OChBFCv8CFfsptSbxLEAJnE"
+    }
+  }).done(function(data) {
+  const universidades =data.map(element =>{
+    return element.nombreinstitucion;
+  });
+  const nuni = [...new Set(universidades)];
+  $("#uni").autocomplete({
+    source: nuni
+  });
+  console.log(nuni)
+  console.log(universidades)
+  });
+}
+</script>
+
+
 <script scr= "https://code.jquery.com/jquery-1.12.4.js"></script>
-<script scr="https://code.jquery.com/jquery-1.12.4.min.js"
-
-
-
-
+<script scr="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 
 </body>
