@@ -1,104 +1,76 @@
 *{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding:0;
 }
-
-body{
-    font-family: 'open sans';
-} 
-
-.contenedor{
-    padding: 60px 0;
+.contenedor {
+    padding: 60px 0; 
     width: 90%;
     max-width: 1000px;
     margin: auto;
-    overFlow: hidden;
+    overflow: hidden;
+  }
+  .logo h2 {
+    display: inline-block;
+    margin: 40px;
+    margin-bottom: 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size:  32px;
+    color: #fff;
 }
-.titulo{
-    color: #642a73;
-    font-size: 30px;
+header {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #FEAC5E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(184, 53%, 54%, 0.609), hsla(294, 48%, 65%, 0.692), hsla(184, 53%, 54%, 0.609)), url(../img/scott-graham-5fNmWej4tAA-unsplash.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(184, 53%, 54%, 0.609), hsla(294, 48%, 65%, 0.692), hsla(184, 53%, 54%, 0.609)), url(../img/scott-graham-5fNmWej4tAA-unsplash.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+}
+.textos_header{
+    padding: 20px;
+    margin-top: 80px;
+    text-align:center;
+    color: white;
+} h3 {
+    font-size: 40px;
+} p {
+    font-size: 20px;
+}
+.wave {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: -20px;
+    width: 100%;
+}
+header .flex {
+    display: flex;
+    justify-content: space-around;
+}
+.titulo {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
     text-align: center;
     margin-bottom: 60px;
 }
-header {
-    width: 100%;
-    height: 600px;
-    background: #df0c6e; 
-     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); 
-     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f7797d9d, #fbd886b0, #c6ffddd0), url()
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-nav{
-    text-align: right;
-    padding: 30px 50px 0 0;
-}
 
-nav > a{
-    color:rgb(177, 11, 155);
-    font-weight: 300;
-    text-decoration: none;
-    margin-right: 10px
+.texto_ayuda{
+        font-size: 28px;
+        margin-top: 40px;
+    }
+footer{
+     width: 100%;
+    height: 75px;
 }
-
-nav > a:hover{
-    text-decoration: underline;
-}
-
-header .textos-header{
+.content_footer {
     display: flex;
-    height: 430px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px;
 }
-
-.textos-header h1{
-    font-size: 50px;
-    color:rgb(241, 11, 145);
-
+h5 {
+    font-family: 'Press Start 2P', cursive;
 }
-
-.wave{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.contenedor-ayuda{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.imagen-about-us{
-    width: 39%;
-}
-
-.contenedor-ayuda .contenedor-textos{
-    width: 60%;
-}
-
-.contenedor-textos h3{
-    margin-bottom: 15px;
-}
-
-.contenedor-textos h3 span{
-    background: #4d0686;
-    color:#fff;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    padding: 2px;
-}
-
- 
-
 
 
 

@@ -107,8 +107,9 @@ h2 {
 /*Team*/
 
 .card-testimonio{
+    float: none;
     padding: 5px;
-    margin: 10px;
+    margin: 10px auto;
     background-color: hsla(294, 53%, 69%, 0.822);
     border-radius: 5px;
     
