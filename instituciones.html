@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codea - Universidades</title>
+    <title>Codea - Instituciones</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/english_test_style.css">
     <link rel="stylesheet" href= "http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/black-tie/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type= "text/javascript" src= "http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-
+    <link rel="stylesheet" href="CSS/english_test_style.css">
 </head>
 <body>
     <div class="container">
@@ -36,18 +34,25 @@
     <main>
         <div class="u_container">
             <section>
-                <input type="text" id="uni" placeholder="Buscar por nombre">
-
+                <input class="search_bar" type="text" id="uni" placeholder="Buscar por nombre">
+                <input class="btn btn-info" type="button" value="Buscar" style="padding: 10px; margin: 30px 60px 30px 0px; float: right;">
             </section>
-            <hr>
-
+            
+            <table class="table table-bordered">
+              <thead>
+                <th>Nombre de institución</th>
+                <th>Ubicación</th>
+            </thead>
+            <tbody id="instituciones">
+            </tbody>
+            </table>
         </div>
-
-
     </main>
-
-
 </div>
+<footer>
+  <hr>
+  <h5 style="text-align: center;"><a href="index.html" style="text-decoration: none;">Codea</a>, 2020. All rigths reserved.</h5>          
+</footer>
 
 <script>
 $ (document).ready(function() {
@@ -61,10 +66,20 @@ $ (document).ready(function() {
     url: "https://www.datos.gov.co/resource/iwb2-skc4.json",
     type: "GET",
     data: {
-      "$limit" : 5000,
+      "$limit" : 1000,
       "$$app_token" : "62OChBFCv8CFfsptSbxLEAJnE"
     }
   }).done(function(data) {
+
+    data.forEach(element => {
+      let html = '<tr>';
+      html += '<td>'+ element.nombreinstitucion + '</td>';
+      html += '<td>'+ element.nombredeparamento + '</td>';
+      html += '</tr>';
+
+      $(html).appendTo('#instituciones')
+    });
+      
   const universidades =data.map(element =>{
     return element.nombreinstitucion;
   });
