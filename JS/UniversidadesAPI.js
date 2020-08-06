@@ -1,6 +1,4 @@
 
-
-
 const botonDeBusqueda = document.getElementById('#busqueda');
 
 function boton(){
