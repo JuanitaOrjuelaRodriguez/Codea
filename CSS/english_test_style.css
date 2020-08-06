@@ -75,12 +75,20 @@ footer{
     height: 666px;
     border-radius: 10px;
     border: 1px rgb(207, 207, 207) solid;
-    overflow: hidden;
+    -webkit-box-shadow: 10px 7px 14px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 7px 14px -11px rgba(0,0,0,0.75);
+    box-shadow: 10px 7px 14px -11px rgba(0,0,0,0.75);
+    overflow-y: scroll;
 }
-
-.search_bar {
+.link_ayuda_universidades{
+    color: rgb(255, 255, 255);
+    background-color: rgb(110, 81, 189);
+    padding: 6px;
     border-radius: 5px;
-    width: 280px;
-    padding: 10px;
-    margin: 30px 0px 30px 0px;
+    margin-left: 10px;
+}
+.link_ayuda_universidades:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(72, 29, 190);
+    text-decoration: none;
 }
